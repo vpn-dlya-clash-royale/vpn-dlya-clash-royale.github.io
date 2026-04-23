@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A0A00"/>
+      <stop offset="100%" stop-color="#0D0500"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF8C00"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#CC4400"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="0.9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+  <!-- Shield shape -->
+  <path d="M16 3 L29 8.5 L29 19 Q29 27 16 31 Q3 27 3 19 L3 8.5 Z" fill="url(#shield)" filter="url(#glow)"/>
+  <!-- Shield inner highlight -->
+  <path d="M16 5.5 L27 10.2 L27 19 Q27 25.5 16 29 Q5 25.5 5 19 L5 10.2 Z" fill="none" stroke="url(#gold)" stroke-width="0.7" opacity="0.7"/>
+  <!-- Crown icon inside -->
+  <path d="M10 21 L10 15 L13 18 L16 13 L19 18 L22 15 L22 21 Z" fill="url(#gold)" opacity="0.95"/>
+  <rect x="10" y="21" width="12" height="2.5" rx="1" fill="url(#gold)" opacity="0.95"/>
+</svg>
